@@ -1,0 +1,133 @@
+<div class="container">
+
+    <header>
+      <h2 style="position: absolute; left: 25%;top:3%;font-weight: bold;color:white ;font-size:60px;"> Word Frequency Counter</h2>
+    </header>
+  
+    <div class="cover">
+      <h1 style="position: absolute; left:30%;top: 35%;font-weight: bold;color:white ;font-size: 20px;">Get Top 10 Most Frequent Words</h1>
+      <form  class="flex-form" style="position: absolute; left: 30%; top: 50%;" action="{% url 'count' %}">
+        <label for="from">
+          <i class="ion-location"></i>
+        </label>
+        <input name ="fulltextArea" type="search" placeholder="Enter Your URL">
+        <input type="submit" value="Count">
+      </form>
+    </div>
+  
+  </div>
+<style>
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+::-webkit-input-placeholder {
+  color: #56585b;
+}
+
+::-moz-placeholder {
+  color: #56585b;
+}
+
+:-moz-placeholder {
+  color: #56585b;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.5rem;
+}
+
+i {
+  font-size: 1.3rem;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: url('https://source.unsplash.com/G8rRItjrwkA') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  color: #0a0a0b;
+  overflow: hidden;
+}
+
+  .flex-form input[type="submit"] {
+  background: #ef3f5a;
+  border: 1px solid #ef3f5a;
+  color: #fff;
+  padding: 0 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.flex-form input[type="submit"]:hover {
+  background: #d73851;
+  border: 1px solid #d73851;
+}
+
+.flex-form {
+  display: -webkit-box;
+  display: flex;
+  z-index: 10;
+  position: relative;
+  width: 500px;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.flex-form > * {
+  border: 0;
+  padding: 0 0 0 10px;
+  background: #fff;
+  line-height: 50px;
+  font-size: 1rem;
+  border-radius: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+input[type="search"] {
+  flex-basis: 500px;
+}
+
+  
+  
+</style>
+  
+
+
+
+
+
+
+<!-- <h1>Welcome to word frequency counter</h1>
+<form action="{% url 'count' %}">
+    <textarea name='fulltextArea' cols=40 rows=10></textarea>
+    <input type='submit' value='Count'>
+
+</form> -->
